@@ -1,5 +1,5 @@
-makeCacheMatrix <- function(x = numeric()) {
-      #This function, makeCacheMatrix creates a special "list", with functions to
+makeCacheMatrix <- function(x = matrix()) {
+      #This function, makeCacheMatrix creates a special "matrix", with functions to
       #1. set the value of the matrix
       #2. get the value of the matrix
       #3. set the value of the inverse of the matrix
@@ -21,7 +21,7 @@ makeCacheMatrix <- function(x = numeric()) {
 
 cacheSolve <- function(x) {
       #This function inverses a matrix of the special "matrix" created with the above function. 
-      #However, if the invesed matrix already exists, it gets the matrix from the cache and skips the computation. 
+      #However, if the inversed matrix already exists, it gets the matrix from the cache and skips the computation. 
       #Otherwise, it inverses the matrix using solve() 
       m <- x$getmatrix()
       if(!is.null(m)) {
